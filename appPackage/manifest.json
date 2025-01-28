@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.19",
+  "id": "${{TEAMS_APP_ID}}",
+  "version": "1.0.0",
+  "developer": {
+    "name": "SAP Integration Team",
+    "websiteUrl": "https://www.sap.com",
+    "privacyUrl": "https://www.sap.com/privacy",
+    "termsOfUseUrl": "https://www.sap.com/terms-of-use"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "SAP Copilot v1${{APP_NAME_SUFFIX}}",
+    "full": "SAP Business Integration Assistant"
+  },
+  "description": {
+    "short": "Access and manage SAP business data with intelligent assistance.",
+    "full": "A powerful integration that connects Microsoft Teams with SAP systems, allowing users to query and manage SAP business data through natural language interactions."
+  },
+  "accentColor": "#0051A2",
+  "copilotAgents": { 
+    "declarativeAgents": [
+      {
+        "id": "sapDeclarativeAgent",
+        "file": "sapDeclarativeAgent.json"
+      }
+    ]
+  },
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ]
+}

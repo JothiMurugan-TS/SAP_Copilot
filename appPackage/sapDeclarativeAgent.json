@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.2/schema.json",
+  "version": "v1.2",
+  "name": "SAP Copilot V1",
+  "description": "This declarative agent helps you with SAP product information and queries.",
+  "instructions": "$[file('instruction.txt')]",
+  "conversation_starters": [
+    {
+      "title": "Retrieve Product Information",
+      "text": "Provide the product details of ProductID HT-1007 "
+    },
+    {
+      "title":"Category in table view",
+      "text":"Provide the details of Accessories from the inventory in table view."
+    },
+    {
+      "title":"Categories and Counts",
+      "text":"List out all the categories of products and count of products per category"
+    }
+  ],
+  "actions": [
+    {
+      "id": "sapPlugin",
+      "file": "ai-plugin.json"
+    }
+  ]
+}
